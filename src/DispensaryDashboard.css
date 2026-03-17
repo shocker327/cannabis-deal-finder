@@ -1,0 +1,402 @@
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a0f2e 100%);
+  color: white;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-logo {
+  width: 3rem;
+  height: 3rem;
+  color: #a855f7;
+  filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.5));
+}
+
+.dashboard-header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.dashboard-header p {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.logout-button:hover {
+  background: rgba(239, 68, 68, 0.3);
+}
+
+.dashboard-content {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.deals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.deals-header h2 {
+  font-size: 2rem;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+}
+
+.add-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(16, 185, 129, 0.6);
+}
+
+.button-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.deal-form-container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.form-header h3 {
+  font-size: 1.5rem;
+}
+
+.cancel-button {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s;
+}
+
+.cancel-button:hover {
+  color: #ef4444;
+}
+
+.deal-form {
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  color: #d1d5db;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #a855f7;
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.2);
+}
+
+.form-group input::placeholder {
+  color: #6b7280;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.cancel-form-button {
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cancel-form-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.save-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
+}
+
+.save-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(168, 85, 247, 0.6);
+}
+
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.deal-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+
+.deal-item:hover {
+  border-color: rgba(168, 85, 247, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2);
+}
+
+.deal-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.deal-item-header h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.deal-type {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.deal-type.indica {
+  background: rgba(168, 85, 247, 0.2);
+  color: #a855f7;
+}
+
+.deal-type.sativa {
+  background: rgba(251, 146, 60, 0.2);
+  color: #fb923c;
+}
+
+.deal-type.hybrid {
+  background: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+}
+
+.deal-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+
+.icon-button.edit {
+  color: #10b981;
+}
+
+.icon-button.edit:hover {
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.icon-button.delete {
+  color: #ef4444;
+}
+
+.icon-button.delete:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.deal-item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.deal-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.deal-price .current {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #10b981;
+}
+
+.deal-price .original {
+  font-size: 1.25rem;
+  color: #6b7280;
+  text-decoration: line-through;
+}
+
+.deal-price .discount {
+  padding: 0.25rem 0.75rem;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.deal-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.deal-details p {
+  color: #d1d5db;
+  font-size: 0.875rem;
+}
+
+.deal-details strong {
+  color: #9ca3af;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: 1rem;
+}
+
+.empty-state h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .header-left {
+    flex-direction: column;
+  }
+
+  .deals-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .deals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .cancel-form-button,
+  .save-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
